@@ -80,7 +80,10 @@ app.post('/scheduleclass',(req,res)=>{
             }
         });
     }
-
+      res.json({
+      "slot_confirmed": "false",
+      "reason": "teacher is not available on this day"
+  })
 });
 app.listen(8080,()=>{
     console.log("Serving at portno 8080")
